@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="prompt_nome">Nome</string>
+    <string name="error_missing_gender">Falta informar o gênero</string>
+    <string name="error_field_required">Este campo é obrigatório</string>
+
+    <string name="registro_de_convidados">Registro de convidados</string>
+    <string name="homem">Homem</string>
+    <string name="mulher">Mulher</string>
+    <string name="server_error" >Erro ao acessar servidor</string>
+</resources>
