@@ -1,0 +1,116 @@
+-- Tela 1 - Menu inicial
+
+* Exibir popup com conteúdo do leia-me 1vez na vida, daí guardar em cache que já foi visto das outras vezes q o programa for aberto. 
+
+Discussão
+
+Lopes -- a não ser q o evento mude... daí o app deve ter a informação de sempre quando tiver q obrigar o usuário a se conectar na internet para atualizar a informação do evento.
+
+Biasibetti -- O maximo que pode mudar são a tabela de valores as regras em si da casa a proposito sao sempre as mesmas mas se for colocar uma coisa dinamicamente pode colocar tudo do leima-me (Lopes -- se tem um grupo de festas com preços e regras diferentes, como vai ficar tudo dinamicamente no leia-me?)
+
+Mas se o usuário for ate o leia-me vai abrir normalmente? Se o app chamar o leia-me também? Se a resposta sim então é legal ter isso sim! 
+
+Discussão
+
+Lopes -- se ele estiver na página principal, clicar no botão direito do celular, ou aquele de mais opções... e daí clicar no leia-me vai aparecer normal.
+
+Biasibetti -- importante é ele ter o leia-me disponivel se não chega na hora eles pode dizer ir sem documento por exemplo e dizer que eu nao avisei agora se esta ali disponivel nao tira a responsabilidade do app
+
+
+* No menu inicial tbm pode ficar disponível um menu ao clicar no "botão direito" da tela, que abre um menu de baixo pra cima, onde tem a opção de ler o texto "regras da lista"
+	Essa eu não consegui entender
+
+Discussão
+
+Lopes -- tah, isso aí é a mesma coisa q eu já tinha comentado... tu clica no botão padrão do celular de mais opções, daí aparece um menu, daí vai ter a opção "leia-me" ou "regras da lista"... entendeu?
+
+Biasibetti -- que no caso seria os 3 botoes ali de baixo o menu o tela inicial e o voltar correto? ai sim pode ter um sub menu ali mas eu nem pensei o que sera poderia ser colocado ali
+
+Lopes -- ali pode ser colocado o leia-me da lista corrente (se o usuário tiver na lista de convidados normal aparece o leia-me normal, se na de aniversário aparece o leia-me de aniver...)
+
+
+
+
+
+-- Tela 2 - Meu nome na lista
+
+* Exibir um campo de texto largo para colocar o nome, e um botão embaixo à direita que cadastra um próximo nome (Aí fazemos uma pequena animação, onde um campo de texto desliza para a esquerda preenchido com o nome da pessoa e vem um vazio da direita para a esquerda até o centro do formulário. Também haverá um botão anterior. Legal a ideia mas para eles revisar os nomes enviados?
+
+Lopes -- para revisar, vai ter uma listbox embaixo do formulário com todos os nomes. Quando vc clica no nome ele volta para o formulário no modo "edição". sacou? =B
+
+Biasibetti -- acho que saquei sim um CRUD da vida mas so com escrita e edição kkk consegue desenha isso pra mim? nao precisa ser no android pode ser papel e caneta mesmo kkkkk
+
+Lopes -- bem lembrado... caso a pessoa queira excluir o nome ela precisa tocar com o dedo e segurar.. daí aparece uma opção pra ela apagar... pode ser?
+
+Essa parte tem que ser bem facilitada pra eles coloca o nome completo e envia quanto menos opção der mais fácil fica nesse sistema tem como puxar pro lado pra revisar por exemplo?
+
+Lopes -- essa aí a gente vê quando eu terminar essa tela.... hehehe
+
+Biasibetti -- ok
+
+
+
+* Ainda no formulário, um radiogroup com dois radiobuttons para colocar o gênero (se feminio ou masculino). Sim o radio buttton eu não consegui colocar no layout ainda mas pela sua ideia tem que colocar so não entendi como eh o desenho de um radio Button com outros dois radio dentro kkkkk
+
+
+* Também podemos exibir os nomes preenchidos embaixo do formulário, todos editáveis.
+
+
+
+Um porem a perguntar já que seu pensamento ta indo a mais que eu e levantou essas duas possibilidades que eu não tinha pensado talvez pela dificuldade
+
+Primeira: As informações teriam que ser dinâmicas caso venha alterar um valor ou horário ou na parte de aniver um presente ou promoção, isso é complicado?
+
+Lopes -- Assim, toda a vez q o cara tá conectado na internet e abre o app ele vai no servidor e pergunta qual será a data da próxima atualização do leia-me, entende? Daí tbm já procura a versão mais recente do leia-me e coloca lá pro cara. Caso ele esteja passado da data da próxima atualização do leia-me, o app obriga o usuário a estar conectado na internet para abrir-lo. Quando finalmente o programa é aberto com a net bombando no celular, o app vai no servidor, atualiza o arquivo leia-me e pega a data da próxima atualização. Entendeu?
+
+Ou seja, lá no banco de dados vc tem q fornecer a data q vc vai atualizar o leia-me. ok?
+
+Biasibetti -- entendi e ja mudar caso precise ou seja as informaçoes do leia-me fica numa tabela do banco se eu precisa troca do um update na tabela com as novas informaçoes e a data da proxima atualização como essas coisas demoram pra muda posso dar um data bem longa
+
+mas é preciso bloquear o acesso dele ao app se passar da data e abrir o app sem net? pq afinal o app so vai funcionar com net pra poder enivar ou seja bem dificil ser aberto sem net
+
+Lopes -- o app funciona sem net. Mas tem suas funcionalidades limitadas. Ele funciona se estiver dentro da data do leia-me. E funciona pra escrever a lista. Mas para submeter a lista precisa de net.
+
+Biasibetti -- sim entendi so funciona com net eu digo so envia a lista com net o reesto fica so visualizaçãon meu medo e que o usuario burro digamos assim passe da data de atulização e abre o app e o app bloqueia elediz que so com net o usuario burro ja vai achar que eh bug sera que não?
+
+Lopes -- ah cara, acho q não. A mensagem vai ser bem clara "para o app funcionar, ligue o celular na internet"... daí o máximo q o cara vai fazer pro app funcionar é ligar na internet e tentar de novo... isso é bem comum cara!
+
+
+
+Segundo: fico meio vago ter uma lista mas não tem o nome da festa nem a data da festa a qual aquela lista pertence nem se quer o flaayer (folder) dela o que poderia ser feito de forma que não fosse dificulta seu desenvolvimento?
+
+Lopes -- cara, sobre essa questão de ter a festa e não ter uma lista.. foi a outra proposta que eu fiz, antes de aparecer a tela da lista, a gente põe um messagebox com um combobox com as festas disponíveis (pode ser que tenha só uma, mas é assim mesmo) daí o usuário seleciona dá ok e vai pros nomes
+
+Biasibetti -- isso é perfeito nao conseguria pensar em nada melhor ate pq ai pode cadastar mais de uma mas pra nao da galho cadastra apenas uma e so vai mais um campo pra dentro da tabela de nomes no caso tipo o campo data ou campo name_party
+
+
+Biasibetti -- Eu pensei em criar um botao onde o nome seria algo do tipo Flayer da festa ou sei lah qualquer coisa que referencie ai o user clica e o app busca no banco a jpg que estiver la 
+
+(Colocar o flaayer como layout na tela inicial, toda vez que o usurio selecionar a festa no comobox)
+
+Sobre o Login… (pq não fazer)
+Meu professor pergunto se vai ter login e senha eu disse que a proposito não precisa disso pq o app não tem esse tipo de segurança qualquer pessoa que queria ir pode enviar lista o que vc pensa sobre?
+
+Lopes -- acho que vc deveria pensar um pouco melhor nisso. Pois sua festa poderia ser facilmente boicotada.
+Pense numa coisa: a festa tem lugares contados né? Tipo, se passar de um determinado número, vc tem q dar como lotado o bagulho né?
+Daí se alguém quer te boicotar, é só mandar uma ou duas listas gigantes com nomes aleatórios de pessoas que não existem. 
+Daí vc vai reservar lugares pra ninguém preencher.
+Então, sim, acho que deveria ter um sistema de login... pense a respeito e me dê um retorno!
+
+Biasibetti -- Quanto ao login seria mais estetico hoje meu trabalho é justamente ao contrario disso é quanto mais eu colocar de pessoa melhor mais dinheiro pra mim mais pessoas na casa sim a casa tem um limite de pessoas mas dificilmente ela passa esse limite em show nacional talvez mas mesmo que passe hoje nao existe uma se quer casa noturna que trabalhe dentro no numero correto de pessoas exepmplo WHALL gracatai caberia 300 pessoa ao seu total ela trabalha com 800 normalmente kkk SNK onde eu trabalho ja cabe quase 2.500 claro que em festa normal nao cheg aa 2 mil mas ja teve show com 3 mil dentro esse é um risco que eu corro hoje das pessoas enviar nomes de pessoas que nao vão so para me zuar mas isso eh beeeeeem remoto honestamente uma vez aconteceu de um cara colocar um tal de thomas turbando na lista e obvio que eu reviso e tirei kkkk fora quanto mais genti tiver melhor a lista hoje gira em torno de 2 a 3 folhas de lista com duas colunas cada folha isso ao total da media de 150 pessoas ou seja 4 folhas 8 colunas e da 150 pessoas é normal não trem muito como controlar se a pessoa mandou nome de quem vai e quem nao vai na media a cada 10 nomes vai 3 nao tem como controlar se a pessoa vai ou nao o login seria a mais fim estetico tanto que na tela de leima tem o escrito que diz: EM CASO DE USO INDEVIDO DO APP SEU DESCREDENCIAMENTO SERA IMEDIATO E POR CONSEQUENCIA A NAO INSERÇÃO DE NOMES NA LISTA NOVAMENTE. entao é mais pra dar um medo dele do que limitar entendeu mais ou menos,? o que vc acha?
+
+Lopes -- acho que vc quer se expor ao risco de ser trollado, em nome da praticidade...
+
+Ainda assim, tava pensando, quando vc aceita instalar um app, vc tem q dar permissões, tipo, acessar o endereço de email, e talz, daí de repente dava pra gravar no banco isso, pra se caso tiver alguma coisa do tipo, a gente poder rastrear, ou recusar q a pessoa use o app.
+
+Biasibetti -- é que pensa pela balada ai vc limita a 400 nomes desses 400 nomes ja inseridos vai ir 150 ou seja tu ainda 250 espaços disponiveis na balada so que ai o resto das pessoas que querem ir e nao vao poder pq ja deu o limite de 400 digamos assim entao nao tem como definir um limite de pessoas na lista pq vc nao sabe daquela lista quantos realmente vao e se for todo mundo o que nao acontece melhor ainda pra mim e pra casa quanto mais gente mais dinheiro o problema maior aqui eh honestamente a tinta gasta na impressao de nomes que nao vao mas isso realmente nao eh problema pra casa, agora quanto a isso realmente ébom ter se eu nao me engano da pra pegar o EMEI do cel que ta usando o app pra ter esse cadastrinho com algumas informaçoes so lembre que nao pode ser tao extenso as implementaçoes pra primeiro de tudo nao te dificultar segundo de tudo nao fica mais caro pra mim e terceiro e nao menos importante nos temos um prazo meio curto 6 meses pra entrega final
+
+
+
+Existe maneira de encerra o atividade do app via hora? exemplo apos as 21 ele não envia pro servidor mais nada?
+
+Lopes -- sim, podemos colocar essa funcionalidade.. o servidor pode passar a recusar posts depois de determinada hora.. numa boa! =)
+
+Biasibetti -- Isso é legal pq eu tenho hora de envio ai a pessoa nvia depois e chega na hora quer fazer bagunça dizendo que mandou mas se mandou depois da minha hora de envio nao vai mais estar por isso um bloqueio era legal
+
+

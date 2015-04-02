@@ -1,0 +1,19 @@
+﻿
+
+-- Tela 1 - Menu inicial
+
+* Exibir popup com conteúdo do leia-me 1vez na vida, daí guardar em cache que já foi visto das outras vezes q o programa for aberto. 
+Mas se o usuário for ate o leia-me vai abrir normalmente? Se o app chamar o leia-me também? Se a resposta sim então é legal ter isso sim! 
+
+* No menu inicial tbm pode ficar disponível um menu ao clicar no "botão direito" da tela, que abre um menu de baixo pra cima, onde tem a opção de ler o texto "regras da lista"
+	Essa eu não consegui entender
+
+-- Tela 2 - Meu nome na lista
+
+* Exibir um campo de texto largo para colocar o nome, e um botão embaixo à direita que cadastra um próximo nome (Aí fazemos uma pequena animação, onde um campo de texto desliza para a esquerda preenchido com o nome da pessoa e vem um vazio da direita para a esquerda até o centro do formulário. Também haverá um botão anterior. Legal a ideia mas para eles revisar os nomes enviados? Essa parte tem que ser bem facilitada pra eles coloca o nome completo e envia quanto menos opção der mais fácil fica nesse sistema tem como puxar pro lado pra revisar por exemplo?
+
+* Ainda no formulário, um radiogroup com dois radiobuttons para colocar o gênero (se feminio ou masculino). Sim o radio buttton eu não consegui colocar no layout ainda mas pela sua ideia tem que colocar so não entendi como eh o desenho de um radio Button com outros dois radio dentro kkkkk
+
+* Também podemos exibir os nomes preenchidos embaixo do formulário, todos editáveis.
+Aqui no caso seria a revisão mas aonde vc diz tipo um campo de peenchimento e um campo de vizualização?
+

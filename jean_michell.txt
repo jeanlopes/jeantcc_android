@@ -1,0 +1,39 @@
+
+
+-- Tela 1 - Menu inicial
+
+* Exibir popup com conteúdo do leia-me 1vez na vida, daí guardar em cache que já foi visto das outras vezes q o programa for aberto.
+
+* No menu inicial tbm pode ficar disponível um menu ao clicar no "botão direito" da tela, que abre um menu de baixo pra cima, onde tem a opção de ler o texto "regras da lista"
+
+-- Tela 2 - Meu nome na lista
+
+* Exibir um campo de texto largo para colocar o nome, e um botão embaixo à direita que cadastra um próximo nome (Aí fazemos uma pequena animação, onde um campo de texto desliza para a esquerda preenchido com o nome da pessoa e vem um vazio da direita para a esquerda até o centro do formulário. Também haverá um botão anterior.
+
+* Ainda no formulário, um radiogroup com dois radiobuttons para colocar o gênero (se feminio ou masculino).
+
+* Também podemos exibir os nomes preenchidos embaixo do formulário, todos editáveis.
+
+* Abaixo de tudo tem um botão para o envio. O botão sair pode ser omitido, valendo-se da função do botão voltar do celular. Durante o preenchimento da lista, os dados vão sendo salvos num banco sqlite temporário no celular. Se termina a bateria ou algo assim, a pessoa não tem q digitar tudo de novo. Também seria importante nesse caso um botão "resetar" ou "limpar", caso a pessoa desista da lista no meio do caminho.
+
+-- Tela 3 - Confirmação de envio
+
+* Tudo igual, não muda nada
+
+-- Tela 4 - Atenção aniversariante 
+
+* Repetir esquema das regras da lista, a primeira vez q o cara clicar no botão aniversariante, aparece o popup, depois nunca mais (a não ser que mudem as regras, daí aparece de novo, pode ser?) pq senão fica muito chato e diminui a amigabilidade do aplicativo ;)
+
+
+-- Tela 5 - Cadastro de aniversariante e convidados
+
+* Segue o mesmo esquema da outra tela, só que a primeira coisa a ser cadastrada é o aniversariante, sem opção de pular o cadastro. A segunda coisa a ser cadastrada é o acompanhante, com a opção de pular. Daí depois os convidados (tem um número de convidados mínimos que precisam ser cadastrados neste caso ou não?)
+
+-- Tela 7 - Contato promoter
+
+* A tela em si tudo igual, não muda nada.
+
+* Quando o e-mail for enviado, ao invés de mudar a tela, apenas envia um popup (messagebox) para dizer que foi convirmado. Daí não precisa fazer outra tela, deixando o programa mais leve, blá blá blá blá blá....
+
+
+-- 
